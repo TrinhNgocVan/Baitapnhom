@@ -23,7 +23,12 @@
             Width="1000" Height="1000"/>
         </RelativePanel>
         <RelativePanel Grid.Row="0" Grid.Column="0">
-            <TextBlock Text="Only"/>
+            <TextBlock
+                FontSize="30"               
+                x:Name="Text0"
+                Margin="40" 
+                Text="Only"
+                Foreground="SaddleBrown"/>
             <TextBlock 
                 x:Name="Text1"
                 Text="$19" Margin="40" 
