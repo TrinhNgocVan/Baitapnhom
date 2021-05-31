@@ -26,7 +26,7 @@ namespace Baitapnhom.Pages
         {
             this.InitializeComponent();
         }
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string msg = e.Parameter as string;
             Title.Text = msg;

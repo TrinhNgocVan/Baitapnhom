@@ -30,17 +30,8 @@ namespace Baitapnhom.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string msg = e.Parameter as string;
-            
-
-
-
-
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-          
-        }
-
+        
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string name = input1.Text;
@@ -49,8 +40,7 @@ namespace Baitapnhom.Pages
             string age = input4.Text;
             string type = input5.Text;
             Customer customer = new Customer(name, address, phone, age, type);
-            this.Frame.Navigate(typeof(ListCustomer),customer);
-        
-                }
+            this.Frame.Navigate(typeof(ListCustomer),customer); 
+        }
     }
 }

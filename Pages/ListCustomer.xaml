@@ -14,9 +14,6 @@
             <!--<ListView  x:Name="listCustomer" 
                    Margin="10" Width="Auto" Height="Auto" 
                    >
-
-
-
                 <ListView.Header >
                     <TextBlock TextAlignment="Left" FontSize="30" Text="List customer"/>
 
@@ -56,7 +53,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </RelativePanel>
-      
-        
     </Grid>
 </Page>

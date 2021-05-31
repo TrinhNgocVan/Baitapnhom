@@ -7,9 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
     <Grid Background="AliceBlue">
-
         <ScrollViewer Margin="10" Width="1000">
             <RelativePanel Margin="10" HorizontalAlignment="Left">
                 <TextBlock Text="Form add new customer " HorizontalAlignment="Center" FontSize="30"/>
@@ -24,7 +22,6 @@
                 <TextBox x:Name="input5" Text="Type" RelativePanel.Below="input4" 
                          RelativePanel.AlignHorizontalCenterWithPanel="False" Margin="0,10,0,0" Width="250" Height="40" />
                 <Button Content="Add" Click="Button_Click_1"  RelativePanel.Below="input5"/>
-
             </RelativePanel>
         </ScrollViewer>
     </Grid>

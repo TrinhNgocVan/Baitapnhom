@@ -24,10 +24,8 @@
             <ListView  x:Name="listCustomer" Loaded="btn1_Click" Margin="10" Width="1000" Height="500" RelativePanel.Below="btn1" >
 
                 <Frame x:Name="contentCustomer"/>
-                
+
             </ListView>
-
-
         </RelativePanel>
        
       

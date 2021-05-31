@@ -59,9 +59,6 @@ namespace Baitapnhom.Pages
             }
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
