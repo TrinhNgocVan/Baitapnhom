@@ -22,5 +22,41 @@
             Loaded="Image_Loaded_Home" 
             Width="1000" Height="1000"/>
         </RelativePanel>
+        <RelativePanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Only"/>
+            <TextBlock 
+                x:Name="Text1"
+                Text="$19" Margin="40" 
+                FontSize="100" 
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontWeight="Bold"
+                TextWrapping="WrapWholeWords"
+                Foreground="SaddleBrown"/>
+            <TextBlock 
+                Text="Cheeseburger" 
+                x:Name="Text2"
+                FontWeight="Bold" 
+                RelativePanel.Below="Text1" 
+                Margin="40,0,0,0"
+                FontSize="50" />
+            <TextBlock 
+                x:Name="Text3"
+                Text="With Onions and tomato and ketchup" 
+                RelativePanel.Below="Text2" 
+                Margin="40,0,0,0"
+                FontSize="30" />
+            <TextBlock 
+                x:Name="Text4"
+                Text="Lorem ipsum dolo sit amet,consectetur adipising elit, sed do einusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad moni veniam quit nostrud excercitation ilimaco" 
+                RelativePanel.Below="Text3" 
+                Margin="40,0,0,0"
+                FontSize="30" />
+            <Button 
+                Content="Order Now" Height="40" 
+                Width="300" 
+                Background="SandyBrown"
+                Margin="40,20,0,0"
+                RelativePanel.Below="Text4"/>
+        </RelativePanel>
     </Grid>
 </Page>
