@@ -16,11 +16,11 @@
         <TextBlock x:Name="Title" Text="Home"/>
         <RelativePanel Grid.Row="0" Grid.Column="1">
             <Image 
-            x:Name="humbergerImage" 
-            HorizontalAlignment="Left" 
-            Margin="70,10,0,0"  
-            Loaded="Image_Loaded_Home" 
-            Width="1000" Height="1000"/>
+                x:Name="humbergerImage" 
+                HorizontalAlignment="Left" 
+                Margin="70,10,0,0"  
+                Loaded="Image_Loaded_Home" 
+                Width="1000" Height="1000"/>
         </RelativePanel>
         <RelativePanel Grid.Row="0" Grid.Column="0">
             <TextBlock

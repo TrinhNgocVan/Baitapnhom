@@ -1,4 +1,5 @@
 ﻿using Baitapnhom.Models;
+using Baitapnhom.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,16 +28,16 @@ namespace Baitapnhom.Pages
         public Layout()
         {
             this.InitializeComponent();
+            GetMenu();
         }
-        private void Menu_Loaded(object sender, RoutedEventArgs e)
+        public async void GetMenu()
         {
-            listMenu.Items.Add(new MenuItem { name = "Home", menuPage = "home" });
-            listMenu.Items.Add(new MenuItem { name = "Eat-In", menuPage = "eatin" });
-            listMenu.Items.Add(new MenuItem { name = "Collection", menuPage = "collection" });
-            listMenu.Items.Add(new MenuItem { name = "Delivery", menuPage = "delivery" });
-            listMenu.Items.Add(new MenuItem { name = "Take-Away", menuPage = "takeaway" });
-            listMenu.Items.Add(new MenuItem { name = "Driver-Payment", menuPage = "driverpayment" });
-            listMenu.Items.Add(new MenuItem { name = "Customers", menuPage = "customers" });
+            Service service = new Service();
+            Menu menu = await service.GetMenu();
+            if (service.GetMenu() != null)
+            {
+                listMenu.ItemsSource = menu.data;
+            }
         }
         public async void Button_Click_Menu(object sender, RoutedEventArgs e)
         {
@@ -50,17 +51,16 @@ namespace Baitapnhom.Pages
 
         public void Listview_Tapped(object sender, RoutedEventArgs e)
         {
-            MenuItem item = listMenu.SelectedItem as MenuItem; // Onclick 
-            switch (item.menuPage)
+            Item item = listMenu.SelectedItem as Item; // Onclick 
+            switch (item.name)
             {
-                case "home": MainFrame.Navigate(typeof(Pages.Home), "THIS IS HOME PAGE"); break;
-                case "eatin": MainFrame.Navigate(typeof(Pages.Eat_In), "THIS IS EAT-IN PAGE"); break;
-                case "collection": MainFrame.Navigate(typeof(Pages.Collection), "THIS IS COLLECTION PAGE"); break;
-                case "delivery": MainFrame.Navigate(typeof(Pages.Delivery), "THIS IS DELIVERY PAGE"); break;
-                case "takeaway": MainFrame.Navigate(typeof(Pages.Take_Away), "THIS IS TAKE AWAY PAGE"); break;
+                case "Burger": MainFrame.Navigate(typeof(Pages.Home), "THIS IS HOME PAGE"); break;
+                case "Dessert": MainFrame.Navigate(typeof(Pages.Eat_In), "THIS IS EAT-IN PAGE"); break;
+                case "Rice": MainFrame.Navigate(typeof(Pages.Collection), "THIS IS COLLECTION PAGE"); break;
+                case "Drinks": MainFrame.Navigate(typeof(Pages.Delivery), "THIS IS DELIVERY PAGE"); break;
+                case "Chicken": MainFrame.Navigate(typeof(Pages.Take_Away), "THIS IS TAKE AWAY PAGE"); break;
                 case "driverpayment": MainFrame.Navigate(typeof(Pages.Driver_Payment), "THIS IS DRIVER PAYMENT PAGE"); break;
                 case "customers": MainFrame.Navigate(typeof(Pages.Customers), "THIS IS CUSTOMER PAGE"); break;
-
             }
         }
         public void Image_Loaded(object sender, RoutedEventArgs e)
