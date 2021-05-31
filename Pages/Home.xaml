@@ -45,12 +45,20 @@
                 RelativePanel.Below="Text2" 
                 Margin="40,0,0,0"
                 FontSize="30" />
-            <TextBlock 
-                x:Name="Text4"
-                Text="Lorem ipsum dolo sit amet,consectetur adipising elit, sed do einusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad moni veniam quit nostrud excercitation ilimaco" 
-                RelativePanel.Below="Text3" 
-                Margin="40,0,0,0"
-                FontSize="30" />
+            <TextBlock
+               RelativePanel.Below="Text3" 
+               Margin="40,0,0,0"
+               x:Name="Text4"
+               LineStackingStrategy="MaxHeight" 
+               LineHeight="10" 
+               Width="500" 
+               TextWrapping="Wrap" >
+                    Lorem ipsum dolo sit amet,
+                    consectetur adipising elit, sed do 
+                    einusmod tempor incididunt ut labore et 
+                    dolore magna aliqua.Ut enim ad moni veniam 
+                    quit nostrud excercitation ilimaco
+            </TextBlock>
             <Button 
                 Content="Order Now" Height="40" 
                 Width="300" 
