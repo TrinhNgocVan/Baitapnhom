@@ -25,20 +25,13 @@
                         Background="White" 
                         Text="Find a setting..." 
                         FontWeight="Thin" Width="164"/>
-                <ListView x:Name="listMenu" Margin="10" Loaded="Menu_Loaded">
+                <ListView x:Name="listMenu" Margin="10">
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="models:MenuItem">
+                        <DataTemplate x:DataType="models:Item">
                             <ListViewItem Tapped="Listview_Tapped">
-                                <RelativePanel x:Name="container" Margin="0,10,0,0" Width="160" RelativePanel.AlignRightWithPanel="True">
-                                    <TextBlock                                             
-                                        RelativePanel.RightOf="ShutDown"
-                                        Margin="5,0,20,0" 
-                                        x:Name="menu_name" 
-                                        Text="{x:Bind name}"/>
-                                    <FontIcon 
-                                        Margin="5,0,0,0" 
-                                        x:Name="ShutDown" 
-                                        Glyph="&#xEB51;"/>
+                                <RelativePanel>
+                                    <Image x:Name="food" Source="{x:Bind icon}" Width="50" Height="50" Margin="10"/>
+                                    <TextBlock RelativePanel.RightOf="food" Text="{x:Bind name}" FontSize="25"/>
                                 </RelativePanel>
                             </ListViewItem>
                         </DataTemplate>
