@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Baitapnhom.Pages.fromAddCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Baitapnhom.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="AliceBlue">
+
+        <ScrollViewer Margin="10" Width="1000">
+            <RelativePanel Margin="10" HorizontalAlignment="Left">
+                <TextBlock Text="Form add new customer " HorizontalAlignment="Center" FontSize="30"/>
+                <TextBox x:Name="input1" Width="250" Height="40"  RelativePanel.AlignHorizontalCenterWithPanel="False"
+                         Margin="0,50,0,0" Text="Name" TextWrapping="Wrap"/>
+                <TextBox x:Name="input2" Width="250" Height="40" RelativePanel.Below="input1" 
+                         RelativePanel.AlignHorizontalCenterWithPanel="False"  Margin="0,10,0,0" Text="Address" TextWrapping="Wrap"/>
+                <TextBox x:Name="input3" Text="Number Phone" RelativePanel.Below="input2" 
+                         RelativePanel.AlignHorizontalCenterWithPanel="False" Margin="0,10,0,0" Width="250" Height="40" />
+                <TextBox x:Name="input4" Text="Age" RelativePanel.Below="input3" 
+                         RelativePanel.AlignHorizontalCenterWithPanel="False" Margin="0,10,0,0" Width="250" Height="40" />
+                <TextBox x:Name="input5" Text="Type" RelativePanel.Below="input4" 
+                         RelativePanel.AlignHorizontalCenterWithPanel="False" Margin="0,10,0,0" Width="250" Height="40" />
+                <Button Content="Add" Click="Button_Click_1"  RelativePanel.Below="input5"/>
+
+            </RelativePanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

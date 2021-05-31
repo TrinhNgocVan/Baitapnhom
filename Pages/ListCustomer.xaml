@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="Baitapnhom.Pages.ListCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Baitapnhom.Pages"
+    xmlns:models="using:Baitapnhom.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="AliceBlue">
+        <RelativePanel>
+            <!--<ListView  x:Name="listCustomer" 
+                   Margin="10" Width="Auto" Height="Auto" 
+                   >
+
+
+
+                <ListView.Header >
+                    <TextBlock TextAlignment="Left" FontSize="30" Text="List customer"/>
+
+                </ListView.Header>
+
+
+                <ListView.ItemTemplate >
+                    <DataTemplate  x:DataType="models:Customer" x:Name="list">
+                        <ScrollViewer Width="50" Margin="10" 
+                                  HorizontalAlignment="Center"
+                                  VerticalScrollBarVisibility="Auto">
+                            <StackPanel>
+
+                                <TextBlock x:Name="input1" Text="{x:Bind Name }"/>
+                                <TextBlock x:Name="input2"  Text="{x:Bind Address }"/>
+                                <TextBlock x:Name="input3"  Text="{x:Bind Phone }"/>
+                                <TextBlock x:Name="input4"  Text="{x:Bind Age }"/>
+                                <TextBlock x:Name="input5" Text="{x:Bind Type }"/>
+                            </StackPanel>
+
+                        </ScrollViewer>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+            <ListView x:Name="listCustomer">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock x:Name="input1" Text="{Binding Name }"/>
+                            <TextBlock x:Name="input2"  Text="{Binding Address }"/>
+                            <TextBlock x:Name="input3"  Text="{Binding Phone }"/>
+                            <TextBlock x:Name="input4"  Text="{Binding Age }"/>
+                            <TextBlock x:Name="input5" Text="{Binding Type }"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+      
+        
+    </Grid>
+</Page>
