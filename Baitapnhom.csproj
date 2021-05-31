@@ -155,8 +155,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\cake-2.jpg" />
     <Content Include="Assets\humberger.jpg" />
     <Content Include="Assets\jolibee.png" />
+    <Content Include="Assets\pizza.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
