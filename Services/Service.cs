@@ -25,5 +25,20 @@ namespace Baitapnhom.Services
             }
             return null;
         }
+        public async Task<Result> GetCategory()
+        {
+            HttpClient httpClient = new HttpClient();
+            var res = await httpClient.GetAsync(configuration.GetCategoryApi());
+            if (res.StatusCode == HttpStatusCode.OK)
+            {
+                var stringContent = await res.Content.ReadAsStringAsync(); //JSON
+                Result dataCategory = JsonConvert.DeserializeObject<Result>(stringContent);
+                return dataCategory;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
