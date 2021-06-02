@@ -13,20 +13,20 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <RelativePanel Margin="50,50,50,50">
+        <RelativePanel Margin="50,50,0,50">
             <TextBlock Text="Only" FontSize="40" Margin="0,20,0,0"  FontWeight="SemiBold" Foreground="Orange" FontFamily="Century Gothic"/>
-            <TextBlock x:Name="bigMoney" Text="$19" FontSize="150" Margin="50,50,0,0" Foreground="Orange" FontWeight="Bold" FontFamily="Elephant"/>
-            <TextBlock x:Name="cheeseBurger"  Text="CheeseBurger" FontSize="60" FontFamily="Century Gothic" FontWeight="Bold" Margin="45,0,0,0" RelativePanel.Below="bigMoney"/>
-            <TextBlock x:Name="onionTomato"  Text="With Onions and tomato and ketchup" FontSize="32" FontFamily="Century Gothic" Margin="50,20,0,0" RelativePanel.Below="cheeseBurger"/>
-            <TextBlock x:Name="loremThing"  Text="Lorem ipsum dolor sit amet, 
+            <TextBlock x:Name="bigMoney" Text="$19" FontSize="230" Margin="50,50,0,0" Foreground="Orange" FontWeight="Bold" FontFamily="Elephant"/>
+            <TextBlock x:Name="cheeseBurger"  Text="CheeseBurger" FontSize="90" FontFamily="Kozuka Mincho Pro H" FontWeight="Bold" Margin="45,0,0,0" RelativePanel.Below="bigMoney"/>
+            <TextBlock x:Name="onionTomato"  Text="With Onions and tomato and ketchup" FontSize="35" FontFamily="Century Gothic" Margin="50,20,0,0" RelativePanel.Below="cheeseBurger"/>
+            <TextBlock x:Name="loremThing"  Text="Lorem ipsum dolor sit amet,
                        consectetur adipiscing elit, sed do
                        eiusmod tempor incididunt ut labore et
                        dolore magna aliqua. Ut enim ad minim veniam,
-                       quis nostrud exercitation ullamco" FontSize="24" FontFamily="Century Gothic" Margin="50,20,0,0" RelativePanel.Below="onionTomato" TextWrapping="Wrap"/>
-            <Button Content="Order Now" RelativePanel.Below="loremThing" Margin="50,50,0,0" Width="500" Height="50" FontSize="28" FontWeight="SemiBold" Foreground="White" Background="#FFB4AC01"  BorderThickness="1"/>
+                       quis nostrud exercitation ullamco" FontSize="30" Margin="50,20,0,0" FontFamily="Segoe UI" RelativePanel.Below="onionTomato" TextWrapping="Wrap" Width="652"/>
+            <Button Content="Order Now" RelativePanel.Below="loremThing" Margin="50,50,0,0" Width="550" Height="70" FontSize="40" FontWeight="SemiBold" Foreground="White" Background="#FFB4AC01"  BorderThickness="1"/>
         </RelativePanel>
-        <RelativePanel Margin="50" Grid.Column="1">
-            <Image Margin="0,200,0,0" Source="/Assets/humber.jpg"/>
+        <RelativePanel Margin="75,50,10,50" Grid.Column="1">
+            <Image Margin="0,200,0,0" Source="/Assets/Hamburger.jpg"/>
         </RelativePanel>
     </Grid>
 </Page>
