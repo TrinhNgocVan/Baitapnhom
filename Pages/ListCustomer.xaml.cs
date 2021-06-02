@@ -35,7 +35,7 @@ namespace Baitapnhom.Pages
             var param = (Customer)e.Parameter;
             customers.Add(param);
             listCustomer.ItemsSource = customers;
-            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled; ,
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled; 
         }
     }
 }
