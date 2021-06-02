@@ -26,5 +26,9 @@ namespace Baitapnhom.Configuration
         {
             return String.Format(baseURL + "/api/menu");
         }
+        public string GetCategoryApi()
+        {
+            return String.Format(baseURL + "/api/category/1");
+        }
     }
 }
