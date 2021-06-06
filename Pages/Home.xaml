@@ -14,8 +14,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <RelativePanel Margin="50,50,0,50">
-            <TextBlock Text="Only" FontSize="40" Margin="0,20,0,0"  FontWeight="SemiBold" Foreground="Orange" FontFamily="Century Gothic"/>
-            <TextBlock x:Name="bigMoney" Text="$19" FontSize="230" Margin="50,50,0,0" Foreground="Orange" FontWeight="Bold" FontFamily="Elephant"/>
+            <TextBlock Text="Only" FontSize="30" Margin="0,20,0,0"  FontWeight="SemiBold" Foreground="Orange" FontFamily="Century Gothic"/>
+            <TextBlock x:Name="bigMoney" Text="$19" FontSize="200" Margin="50,50,0,0" Foreground="Orange" FontWeight="Bold" FontFamily="Elephant"/>
             <TextBlock x:Name="cheeseBurger"  Text="CheeseBurger" FontSize="90" FontFamily="Kozuka Mincho Pro H" FontWeight="Bold" Margin="45,0,0,0" RelativePanel.Below="bigMoney"/>
             <TextBlock x:Name="onionTomato"  Text="With Onions and tomato and ketchup" FontSize="35" FontFamily="Century Gothic" Margin="50,20,0,0" RelativePanel.Below="cheeseBurger"/>
             <TextBlock x:Name="loremThing"  Text="Lorem ipsum dolor sit amet,

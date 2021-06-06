@@ -28,11 +28,11 @@ namespace Baitapnhom.Pages
             this.InitializeComponent();
         }
         // Bat su kien khi click vao menu
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            string msg = e.Parameter as string;
-            Title.Text = msg;
-        }
+        //protected async override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    string msg = e.Parameter as string;
+        //    Title.Text = msg;
+        //}
 
         public void Image_Loaded_Home(object sender, RoutedEventArgs e)
         {

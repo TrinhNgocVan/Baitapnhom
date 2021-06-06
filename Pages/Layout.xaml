@@ -42,7 +42,7 @@
         <SplitView.Content>
             <RelativePanel>
                 <StackPanel 
-                    Height="17" Width="1200" 
+                    Height="17" Width="1500" 
                     Background="DarkRed"/>
                 <TextBlock 
                     x:Name="textIntro" 
@@ -50,9 +50,11 @@
                     Text="C# UI DESIGN BY GROUP 4" 
                     Width="400" Margin="20" 
                     RelativePanel.RightOf="jolibeeImage"/>
-                <StackPanel Margin="100" Height="600" Width="1000" RelativePanel.Below="jolibeeImage">
-                    <ScrollViewer Margin="10" Width="1000" HorizontalAlignment="Left">
-                        <Frame x:Name="MainFrame" Height="600"/>
+                <StackPanel RelativePanel.Below="jolibeeImage" Height="700px" Width="1500px">
+                    <ScrollViewer HorizontalAlignment="Left" Height="700px">
+                        <StackPanel>
+                            <Frame x:Name="MainFrame"/>
+                        </StackPanel>
                     </ScrollViewer>
                 </StackPanel>
                 <Image 
