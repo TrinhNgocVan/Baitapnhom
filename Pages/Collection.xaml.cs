@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Baitapnhom.Models;
+using Baitapnhom.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,11 +27,21 @@ namespace Baitapnhom.Pages
         public Collection()
         {
             this.InitializeComponent();
+            GetCategory();
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             string msg = e.Parameter as string;
             Title.Text = msg;
+        }
+        public async void GetCategory()
+        {
+            Service service = new Service();
+            Result cate = await service.GetCategory();
+            if (service.GetCategory() != null)
+            {
+                listCate.ItemsSource = cate.data.foods;
+            }
         }
     }
 }

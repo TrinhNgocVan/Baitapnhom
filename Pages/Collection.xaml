@@ -4,11 +4,67 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Baitapnhom.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:models="using:Baitapnhom.Models"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock x:Name="Title" Text="Collection"/>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel Margin="50,125,0,62" Background="LightPink">
+            <ListView x:Name="listCate" Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Food">
+                        <ListViewItem>
+                            <RelativePanel>
+                                <!--<Image x:Name="food_image" Source="{x:Bind image}" Width="50" Height="50" Margin="10"/>-->
+                                <TextBlock x:Name="food_name" RelativePanel.RightOf="food" Text="{x:Bind name}" FontSize="25"/>
+                                <!--<TextBlock RelativePanel.Below="food_image" Text="{x:Bind price}" Foreground="Red"/>-->
+                            </RelativePanel>
+                        </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+        <TextBlock x:Name="Title" Text="---MENU*FOOD---" FontSize="40" FontWeight="Bold" FontFamily="Microsoft YaHei UI" Margin="0,74,0,20" Foreground="Orange" HorizontalAlignment="Center" />
+        <!--<RelativePanel Margin="50,125,0,62" Background="LightPink">
+            <ListView x:Name="listCate" Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Food">
+                        <ListViewItem>
+                            <RelativePanel>
+                                <Image x:Name="food_image" Source="{x:Bind image}" Width="50" Height="50" Margin="10"/>
+                                <TextBlock x:Name="food_name" RelativePanel.RightOf="food" Text="{x:Bind name}" FontSize="25"/>
+                                <TextBlock RelativePanel.Below="food_image" Text="{x:Bind price}" Foreground="Red"/>
+                            </RelativePanel>
+                        </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+        <RelativePanel Grid.Column="1">
+             <StackPanel>
+                    <ScrollViewer HorizontalAlignment="Left" Height="700px">
+                        <StackPanel>
+                            -->
+        <!--<Frame x:Name="Detail"/>-->
+        <!--
+                        </StackPanel>
+                    </ScrollViewer>
+             </StackPanel>
+            <ListView x:Name="Food_detail" Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:FoodDetail">
+                        <ListViewItem>
+                            <RelativePanel>
+                                <Image Source="{x:Bind image}" Width="50" Height="50" Margin="10"/>
+                            </RelativePanel>
+                        </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>-->
     </Grid>
 </Page>
