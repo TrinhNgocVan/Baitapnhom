@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Baitapnhom.Models
 {
-    class CreateOrder
+    public class Data
     {
+        public int order_id { get; set; }
+    }
+
+    public class CreateOrder
+    {
+        public string message { get; set; }
+        public Data data { get; set; }
     }
 }

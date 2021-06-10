@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Baitapnhom.Services
 {
-    class CartServices
+    interface CartService
     {
+        List<CartItem> GetCart();
+        bool AddToCart(CartItem item);
+        bool RemoveItem(CartItem item);
+        bool UpdateCart(CartItem item, int qty);
+        bool ClearCart();
     }
 }

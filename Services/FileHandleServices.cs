@@ -8,5 +8,19 @@ namespace Baitapnhom.Services
 {
     class FileHandleServices
     {
+
+        public static async void WriteFile(string filename, string content)
+        {
+            var storage = ApplicationData.Current.LocalFolder; // tìm đến nơi lưu trữ file trong PC (temp)
+            var demoFile = await storage.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(demoFile, content);
+        }
+
+        public static async Task<string> ReadFile(string filename)
+        {
+            var storage = ApplicationData.Current.LocalFolder;
+            var demoFile = await storage.CreateFileAsync(filename, CreationCollisionOption.OpenIfExists);
+            return await FileIO.ReadTextAsync(demoFile);
+        }
     }
 }
