@@ -26,10 +26,5 @@ namespace Baitapnhom.Pages
         {
             this.InitializeComponent();
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            string msg = e.Parameter as string;
-            Title.Text = msg;
-        }
     }
 }

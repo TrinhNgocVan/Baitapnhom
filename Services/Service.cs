@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Baitapnhom.Services
 {
-    class Service
+    public class Service
     {
         private Configuration.Configuration configuration = Configuration.Configuration.GetService();
         public async Task<Menu> GetMenu()
@@ -25,20 +25,17 @@ namespace Baitapnhom.Services
             }
             return null;
         }
-        public async Task<Result> GetCategory()
+        public async Task<Menu_special> GetSpecial()
         {
             HttpClient httpClient = new HttpClient();
-            var res = await httpClient.GetAsync(configuration.GetCategoryApi());
+            var res = await httpClient.GetAsync(configuration.GetSpecialApi());
             if (res.StatusCode == HttpStatusCode.OK)
             {
                 var stringContent = await res.Content.ReadAsStringAsync(); //JSON
-                Result dataCategory = JsonConvert.DeserializeObject<Result>(stringContent);
-                return dataCategory;
+                Menu_special special = JsonConvert.DeserializeObject<Menu_special>(stringContent);
+                return special;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace Baitapnhom.Models
 {
-    public class Category
+    public class Special
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
     }
-
-    public class Food
+    public class Datum
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -22,15 +18,9 @@ namespace Baitapnhom.Models
         public int price { get; set; }
     }
 
-    public class Data
-    {
-        public Category category { get; set; }
-        public List<Food> foods { get; set; }
-    }
-
-    public class Root
+    public class Menu_special
     {
         public string message { get; set; }
-        public Data data { get; set; }
+        public List<Datum> data { get; set; }
     }
 }

@@ -9,6 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="Title" Text="Take_Away"/>
+        <RelativePanel>
+            <Image x:Name="bg" Source="/Assets/kffc.jpg" Width="800" Height="600" Margin="40"/>
+            <TextBlock x:Name="content" Text="Name: fried chicken KFC" Foreground="Red" FontWeight="Bold" FontSize="30" RelativePanel.RightOf="bg" Margin="20,200,0,0"/>
+            <TextBlock x:Name="country" Text="Country: USA" Foreground="Red" FontWeight="Bold" FontSize="30" RelativePanel.RightOf="bg" RelativePanel.Below="content" Margin="20,10,0,0"/>
+            <TextBlock x:Name="price" Text="20$/ 1 slot" Foreground="Red" FontWeight="Bold" FontSize="30" RelativePanel.RightOf="bg" RelativePanel.Below="country" Margin="20,10,0,0"/>
+            <Image x:Name="logo" Source="/Assets/logo.jpg" Width="200" Height="195" RelativePanel.RightOf="bg" RelativePanel.Below="price"/>
+            <Button Content="ORDER NOW !!!!" FontSize="20" FontWeight="Bold" Background="DarkRed" Foreground="White" RelativePanel.RightOf="bg" RelativePanel.Below="logo" Height="43" Width="195"/>
+        </RelativePanel>
     </Grid>
 </Page>

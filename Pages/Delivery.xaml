@@ -8,7 +8,32 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock x:Name="Title" Text="Delivery"/>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel Margin="50,60,50,274" Background="OrangeRed">
+            <TextBlock x:Name="burger" Text="Cocacola" FontSize="50" Foreground="DarkRed" FontWeight="Bold" FontFamily="Ebrima" Margin="30,30,0,0"/>
+            <Image x:Name="bg1" Source="/Assets/cocacola.jpg" Margin="0,100,0,0" />
+            <TextBlock x:Name="LoremThing" Text="Lorem ipsum is a dummy text which is used as a placeholder" FontSize="25" RelativePanel.Below="bg1" Margin="35,20,0,0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="price" Text="$3" FontSize="46" FontWeight="Bold" Foreground="DarkRed" FontFamily="century gothic" RelativePanel.Below="LoremThing" Margin="20,100,0,20" />
+            <Button Content="Order" Width="200" Height="50" FontSize="28" FontWeight="SemiBold" Foreground="White" Background="ForestGreen" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,10,20"/>
+        </RelativePanel>
+        <RelativePanel Margin="10,60,35,274" Background="CadetBlue" Grid.Column="1">
+            <TextBlock x:Name="cake" Text="Pepsi" FontSize="50" Foreground="DarkBlue" FontWeight="Bold" Margin="30,30,0,0"/>
+            <Image x:Name="bg2" Source="/Assets/pepsi.jpg" Margin="0,120,0,0" Height="300" Width="1000" />
+            <TextBlock x:Name="LoremThing1" Text="Lorem ipsum is a dummy text which is used as a placeholder" FontSize="25" RelativePanel.Below="bg2"  Margin="35,20,0,0" TextWrapping="Wrap"/>
+            <TextBlock Text="$3" FontSize="46" FontWeight="Bold" Foreground="DarkBlue" FontFamily="century gothic" RelativePanel.AlignBottomWithPanel="True" Margin="20,0,0,20" />
+            <Button Content="Order" Width="200" Height="50" FontSize="28" FontWeight="SemiBold" Foreground="White" Background="ForestGreen" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,10,20"/>
+        </RelativePanel>
+        <RelativePanel Margin="20,60,50,274" Background="DarkGray" Grid.Column="2">
+            <TextBlock x:Name="pizza" Text="7up" FontSize="50" Foreground="AliceBlue" FontWeight="Bold" Margin="30,30,0,0"/>
+            <Image x:Name="bg3" Source="/Assets/7up.jpg" Margin="0,120,0,0" Height="300" Width="400" />
+            <TextBlock x:Name="LoremThing2" Text="Lorem ipsum is a dummy text which is used as a placeholder" FontSize="25" RelativePanel.Below="bg3" Margin="35,20,0,0" TextWrapping="Wrap"/>
+            <TextBlock Text="$3" FontSize="46" FontWeight="Bold" Foreground="AliceBlue" FontFamily="century gothic" RelativePanel.AlignBottomWithPanel="True" Margin="20,0,0,20" />
+            <Button Content="Order" Width="200" Height="50" FontSize="28" FontWeight="SemiBold" Foreground="White" Background="ForestGreen" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,10,20"/>
+        </RelativePanel>
     </Grid>
 </Page>

@@ -30,5 +30,9 @@ namespace Baitapnhom.Configuration
         {
             return String.Format(baseURL + "/api/category/1");
         }
+        public string GetSpecialApi()
+        {
+            return String.Format(baseURL + "/api/today-special");
+        }
     }
 }

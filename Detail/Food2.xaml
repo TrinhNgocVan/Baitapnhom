@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="Baitapnhom.Pages.Driver_Payment"
+    x:Class="Baitapnhom.Detail.Food2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Baitapnhom.Pages"
+    xmlns:local="using:Baitapnhom.Detail"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -11,15 +11,15 @@
     <Grid>
         <RelativePanel>
             <TextBlock 
-                x:Name="Content" Text="Big Star Burger - USA" 
+                x:Name="Content" Text="Super Jumbo Burger - USA" 
                 FontSize="40" FontWeight="Bold" 
                 Foreground="SandyBrown" HorizontalTextAlignment="Center"/>
             <TextBlock 
-                x:Name="Price" Text="56.000 VND" 
+                x:Name="Price" Text="60.000 VND" 
                 FontSize="30" FontWeight="Bold" 
                 Foreground="OrangeRed" HorizontalTextAlignment="Center" RelativePanel.Below="Content"/>
 
-            <Image x:Name="bg" Source="/Assets/h3.jpg" Width="700" RelativePanel.Below="Price"/>
+            <Image x:Name="bg" Source="/Assets/h2.jpg" Width="700" RelativePanel.Below="Price" />
         </RelativePanel>
     </Grid>
 </Page>
